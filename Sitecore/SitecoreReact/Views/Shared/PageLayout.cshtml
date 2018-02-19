@@ -1,0 +1,19 @@
+﻿@using System.Web.Optimization
+@using Sitecore.Mvc
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>Hello React</title>
+</head>
+<body>
+    @*<div id="content"></div>*@
+<div id="root"></div>
+
+    @Html.Sitecore().Placeholder("app")
+<script src="@Url.Content("~/Web.Assests/src/dist/app.bundle.js")"></script>
+@Html.ReactInitJavaScript()
+  </body>
+</html>

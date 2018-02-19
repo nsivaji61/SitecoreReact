@@ -1,0 +1,7 @@
+@using System.Web.Optimization
+
+@model SitecoreReact.Models.PageTitleViewModel
+@Html.React("Home",new
+{
+    initalModel = Model
+},clientOnly:true)
