@@ -1,0 +1,10 @@
+﻿@model SitecoreReact.Models.FooterViewModel
+@using System.Web.Optimization
+@using React.Web.Mvc
+@{
+    Layout = null;
+}
+@Html.React("Components.Footer", new
+{
+    data = @Model
+})

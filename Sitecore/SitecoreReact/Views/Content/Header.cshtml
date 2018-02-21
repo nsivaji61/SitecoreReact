@@ -1,0 +1,10 @@
+﻿@model SitecoreReact.Models.HeaderViewModel
+
+@{
+    Layout = null;
+}
+@Html.React("Components.Header", new
+{
+    data = @Model
+
+})

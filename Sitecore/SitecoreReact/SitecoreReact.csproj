@@ -156,19 +156,12 @@
     <Compile Include="App_Start\ReactConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ContentController.cs" />
-    <Compile Include="Models\PageBodyViewTitle.cs" />
-    <Compile Include="Models\PageTitleViewModel.cs" />
-    <Compile Include="Models\ScaffoldingController.cs" />
+    <Compile Include="Models\HeaderViewModel.cs" />
+    <Compile Include="Models\FooterViewModel.cs" />
+    <Compile Include="Models\MainContentViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\client.js" />
-    <Content Include="Content\Components\index.js" />
-    <Content Include="Content\Components\MainLayout.jsx" />
-    <Content Include="Content\server.js" />
-    <Content Include="Content\Site.css" />
     <Content Include="Dependencies\Sitecore.Kernel.dll" />
     <Content Include="Dependencies\Sitecore.Mvc.dll" />
     <Content Include="dist\client.bundle.js" />
@@ -181,7 +174,11 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\MainLayout.jsx" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.Assests\src\components\Hello.jsx" />
+    <Content Include="Web.Assests\src\components\Footer.jsx" />
+    <Content Include="Web.Assests\src\components\Header.jsx" />
+    <Content Include="Web.Assests\src\components\Home.jsx" />
+    <Content Include="Web.Assests\src\components\index.js" />
+    <Content Include="Web.Assests\src\components\MainContent.jsx" />
     <Content Include="Web.Assests\src\dist\app.bundle.js" />
     <Content Include="Web.Assests\src\dist\server.bundle.js" />
     <Content Include="Web.Assests\src\index.html" />
@@ -191,7 +188,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Views\Scaffolding\MainLayout.cshtml">
+    <Content Include="Views\Main\Main.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\web.config" />
@@ -207,11 +204,16 @@
     <None Include="Properties\PublishProfiles\Sitecorereact.pubxml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Shared\PageLayout.cshtml" />
+    <Content Include="Views\Shared\PageLayout.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Faq.cshtml" />
     <Content Include="Web.Assests\.babelrc" />
     <Content Include="Web.Assests\package.json" />
+    <Content Include="Views\Content\Header.cshtml" />
+    <Content Include="Views\Content\Footer.cshtml" />
+    <Content Include="Views\Content\MainContent.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -221,7 +223,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Content\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

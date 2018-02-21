@@ -1,7 +1,4 @@
 using React;
-using SitecoreReact.App_Start;
-using System.Web.Optimization;
-
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(SitecoreReact.ReactConfig), "Configure")]
 
 namespace SitecoreReact

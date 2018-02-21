@@ -1,36 +1,45 @@
 ﻿using Sitecore.Mvc.Presentation;
 using Sitecore.Web.UI.WebControls;
 using System.Web.Mvc;
+using Antlr.Runtime;
 
 namespace SitecoreReact.Controllers
 {
     public class ContentController : Controller
     {
-        public ActionResult PageTitle()
+        public ActionResult Header()
         {
-            if (string.IsNullOrEmpty(RenderingContext.Current.Rendering.DataSource))
-            {
-                return null;
-            }
-            var item = RenderingContext.Current.Rendering.Item;
-            var viewModel = new Models.PageTitleViewModel
-            {
-                PageTitle = FieldRenderer.Render(item, "PageTitle")
-            };
-            return View("PageTitle", viewModel);
+	        var item = RenderingContext.Current.Rendering.Item;
+			var viewModel = new Models.HeaderViewModel
+			{
+				HeaderContent = FieldRenderer.Render(item,"HeaderContent")
+
+			};
+			return View(viewModel);
         }
-        public ActionResult PageBody()
+        public ActionResult Footer()
         {
-            if (string.IsNullOrEmpty(RenderingContext.Current.Rendering.DataSource))
-            {
-                return null;
-            }
-            var item = RenderingContext.Current.Rendering.Item;
-            var viewModel = new Models.PageBodyViewTitle
-            {
-                PageBody = FieldRenderer.Render(item, "PageBody")
-            };
-            return View("PageBody", viewModel);
+			var item = RenderingContext.Current.Rendering.Item;
+	        var viewModel = new Models.FooterViewModel
+	        {
+		        FooterContent = FieldRenderer.Render(item, "FooterContent")
+
+	        };
+
+	        return View(viewModel);
+
         }
+
+	    public ActionResult MainContent()
+	    {
+			var item = RenderingContext.Current.Rendering.Item;
+		    var viewModel = new Models.MainContentViewModel()
+		    {
+			    MainContent = FieldRenderer.Render(item, "MainContent")
+
+		    };
+
+		    return View(viewModel);
+		}
     }
 }

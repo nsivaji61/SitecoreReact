@@ -1,0 +1,10 @@
+﻿@model SitecoreReact.Models.MainContentViewModel
+@using System.Web.Optimization
+@using React.Web.Mvc
+@{
+    Layout = null;
+}
+@Html.React("Components.MainContent", new
+{
+    data = @Model
+})
