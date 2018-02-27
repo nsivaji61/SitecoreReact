@@ -7,7 +7,7 @@ Setup
 
 2. Navigate to web.assests folder in terminal or command prompt
 
-3. Run the npm start in commander
+3. Run the npm start in terminal or command prompt
 
 4. Sync the sitecore folder to your local sitecore website
 
