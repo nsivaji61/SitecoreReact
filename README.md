@@ -13,7 +13,7 @@ Setup
 
 5. Build the solution and publish the changes to your sitecore instance. 
 
-6 . Open the react-test-page in page editor and you will see the 4 components
+6. Open the react-test-page in page editor and you will see the 4 components
 
 7. Extend the solution based on your needs
 
